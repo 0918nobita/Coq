@@ -21,3 +21,10 @@ Definition triple x :=
 
 Eval compute in triple 3. (* = 9 : nat *)
 Eval compute in 1 - 2. (* = 0 : nat (自然数の引き算は整数と違う) *)
+
+Require Import ZArith. (* 整数モジュールのインポート *)
+
+Module Z. (* 定義の範囲を区切るために Module を使う *)
+  Open Scope Z_scope. (* 数値や演算子を整数として解釈する *)
+  Eval compute in 1 - 2. (* = -1 : Z (Z は整数の型) *)
+  Eval compute in (2 + 3) / 2. (* = 2 : Z *)
