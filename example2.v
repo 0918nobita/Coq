@@ -28,3 +28,10 @@ Module Z. (* 定義の範囲を区切るために Module を使う *)
   Open Scope Z_scope. (* 数値や演算子を整数として解釈する *)
   Eval compute in 1 - 2. (* = -1 : Z (Z は整数の型) *)
   Eval compute in (2 + 3) / 2. (* = 2 : Z *)
+  Definition p (x y : Z) := 2 * x - y * y.
+  Print p. (* p = fun x y : Z => 2 * x - y * y : Z -> Z -> Z *)
+  Eval compute in p 3 4. (* = -10 : Z *)
+  Definition p' := fun x => fun y => 2 * x - y * y.
+  Print p'. (* p' = fun x y : Z => 2 * x - y * y : Z -> Z -> Z *)
+  Definition q := p 3. (* 部分適用 *)
+  Eval compute [p q] in q. (* p と q の定義だけを展開する *)
