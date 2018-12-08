@@ -24,3 +24,11 @@ Definition next_weekday (d : day) : day :=
 
 (* 方法1. simpl: (simplify) 与えた式を正確に評価する *)
 Eval simpl in (next_weekday (next_weekday saturday)).
+
+(* 方法2. 確認事項に名前を与える *)
+Example test_next_weekday:
+  (next_weekday (next_weekday saturday)) = tuesday.
+Proof.
+  simpl.
+  reflexivity.
+Qed. (* 確認事項は、簡約後の同値チェックによって証明された *)
