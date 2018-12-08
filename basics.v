@@ -19,3 +19,8 @@ Definition next_weekday (d : day) : day :=
   | saturday => monday
   | sunday => monday
   end.
+
+(* [関数定義が正しいことをチェックする] *)
+
+(* 方法1. simpl: (simplify) 与えた式を正確に評価する *)
+Eval simpl in (next_weekday (next_weekday saturday)).
