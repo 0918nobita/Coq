@@ -51,3 +51,9 @@ Definition andb (b1 : bool) (b2 : bool) : bool :=
   | true => b2
   | false => false
   end.
+
+Definition orb (b1 b2 : bool) : bool :=
+  match b1 with
+  | true => true
+  | false => b2
+  end.
