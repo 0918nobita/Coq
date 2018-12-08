@@ -39,3 +39,9 @@ Qed. (* 確認事項は、簡約後の同値チェックによって証明され
 Inductive bool : Type :=
   | true : bool
   | false : bool.
+
+Definition negb (b : bool) : bool :=
+  match b with
+  | true => false
+  | false => true
+  end.
