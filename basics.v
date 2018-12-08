@@ -32,3 +32,10 @@ Proof.
   simpl.
   reflexivity.
 Qed. (* 確認事項は、簡約後の同値チェックによって証明された *)
+
+(* 方法3. Coq で定義したものから、他のより一般的な言語のプログラムを抽出する *)
+
+(* ブール型 (ここでは標準ライブラリを利用せずに自作する) *)
+Inductive bool : Type :=
+  | true : bool
+  | false : bool.
