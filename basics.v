@@ -45,3 +45,9 @@ Definition negb (b : bool) : bool :=
   | true => false
   | false => true
   end.
+
+Definition andb (b1 : bool) (b2 : bool) : bool :=
+  match b1 with
+  | true => b2
+  | false => false
+  end.
