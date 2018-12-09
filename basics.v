@@ -162,4 +162,10 @@ Module Playground2.
       | S _, O => n
       | S n', S m' => minus n' m'
     end.
+
+  Fixpoint mult (n m : nat) : nat :=
+    match n with
+      | O => O
+      | S n' => plus m (mult n' m)
+    end.
 End Playground2.
