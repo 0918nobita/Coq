@@ -182,3 +182,9 @@ Fixpoint exp (base power : nat) : nat :=
 
 Example test_exp : (exp 2 3) = 8.
 Proof. simpl. reflexivity. Qed.
+
+Fixpoint factorial (n : nat) : nat :=
+  match n with
+    | O => S O
+    | S n' => mult n (factorial n')
+  end.
