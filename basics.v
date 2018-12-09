@@ -112,4 +112,12 @@ Module Playground1.
                       (* n が自然数なら S n も自然数 *)
   (* 今まで定義してきた帰納的な型は、実際には式の集合と言うべきもの *)
   (* nat の定義は、nat の要素となる式がどのように構築されるかを表している *)
+
+  Definition pred (n : nat) : nat := (* S とは違って「計算ルール」を示している *)
+    match n with
+      | O => O
+      | S n' => n'
+    end.
+  Check S. (* S : nat -> nat *)
+  Check pred. (* pred : nat -> nat *)
 End Playground1.
