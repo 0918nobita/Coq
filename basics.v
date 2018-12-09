@@ -168,4 +168,7 @@ Module Playground2.
       | O => O
       | S n' => plus m (mult n' m)
     end.
+
+  Example test_mult1 : (mult 3 3) = 9.
+  Proof. simpl. reflexivity. Qed.
 End Playground2.
