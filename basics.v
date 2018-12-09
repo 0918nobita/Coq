@@ -106,4 +106,10 @@ Check negb. (* negb : bool -> bool *)
 Check andb3. (* andb3 : bool -> bool -> bool -> bool *)
 
 Module Playground1.
+  Inductive nat : Type :=
+    | O : nat         (* O は自然数 *)
+    | S : nat -> nat. (* S は自然数を引数に取り、別の自然数を生成する「コンストラクタ」 *)
+                      (* n が自然数なら S n も自然数 *)
+  (* 今まで定義してきた帰納的な型は、実際には式の集合と言うべきもの *)
+  (* nat の定義は、nat の要素となる式がどのように構築されるかを表している *)
 End Playground1.
