@@ -155,4 +155,11 @@ Module Playground2.
       | S n' => S (plus n' m)
     end.
   Eval simpl in (plus (S (S (S O))) (S (S O))). (* 5 : nat *)
+
+  Fixpoint minus (n m : nat) : nat :=
+    match n, m with
+      | O, _ => O
+      | S _, O => n
+      | S n', S m' => minus n' m'
+    end.
 End Playground2.
