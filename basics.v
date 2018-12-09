@@ -85,3 +85,5 @@ Proof. simpl. reflexivity. Qed.
 
 Example test_nandb4 : (nandb true true) = false.
 Proof. simpl. reflexivity. Qed.
+
+Definition andb3 (b1 b2 b3 : bool) : bool := andb (andb b1 b2) b3.
