@@ -139,3 +139,5 @@ Fixpoint evenb (n : nat) : bool :=
   | S O => false
   | S (S n') => evenb n'
   end.
+
+Definition oddb (n : nat) : bool := negb (evenb n).
