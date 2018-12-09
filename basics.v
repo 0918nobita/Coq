@@ -104,3 +104,6 @@ Proof. simpl. reflexivity. Qed.
 Check (negb true). (* negb true : bool *)
 Check negb. (* negb : bool -> bool *)
 Check andb3. (* andb3 : bool -> bool -> bool -> bool *)
+
+Module Playground1.
+End Playground1.
