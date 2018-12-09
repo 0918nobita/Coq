@@ -129,6 +129,6 @@ Definition minustwo (n : nat) : nat :=
     | S (S n') => n'
   end.
 
-Check (S(S(S(S O)))). (* 4 : nat *)
+Check (S (S (S (S O)))). (* 4 : nat *)
 Eval simpl in (minustwo 4). (* 2 : nat *)
 Check minustwo. (* minustwo : nat -> nat *)
