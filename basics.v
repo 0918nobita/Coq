@@ -132,3 +132,10 @@ Definition minustwo (n : nat) : nat :=
 Check (S (S (S (S O)))). (* 4 : nat *)
 Eval simpl in (minustwo 4). (* 2 : nat *)
 Check minustwo. (* minustwo : nat -> nat *)
+
+Fixpoint evenb (n : nat) : bool :=
+  match n with
+  | O => true
+  | S O => false
+  | S (S n') => evenb n'
+  end.
