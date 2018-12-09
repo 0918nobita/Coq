@@ -99,3 +99,8 @@ Proof. simpl. reflexivity. Qed.
 
 Example test_andb34 : (andb3 true true false) = false.
 Proof. simpl. reflexivity. Qed.
+
+(* 式の型を表示する *)
+Check (negb true). (* negb true : bool *)
+Check negb. (* negb : bool -> bool *)
+Check andb3. (* andb3 : bool -> bool -> bool -> bool *)
