@@ -147,3 +147,12 @@ Proof. simpl. reflexivity. Qed.
 
 Example test_oddb2 : (oddb (S(S(S(S( O)))))) = false.
 Proof. simpl. reflexivity. Qed.
+
+Module Playground2.
+  Fixpoint plus (n m : nat) : nat :=
+    match n with
+      | O => m
+      | S n' => S (plus n' m)
+    end.
+  Eval simpl in (plus (S (S (S O))) (S (S O))). (* 5 : nat *)
+End Playground2.
