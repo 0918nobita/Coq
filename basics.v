@@ -71,3 +71,6 @@ Example test_orb4 : (orb true true) = true.
 Proof. simpl. reflexivity. Qed.
 
 Definition admit {T : Type} : T. Admitted.
+
+Definition nandb (b1 b2 : bool) : bool := negb (andb b1 b2).
+
