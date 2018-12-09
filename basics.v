@@ -179,3 +179,6 @@ Fixpoint exp (base power : nat) : nat :=
     | O => S O
     | S p => mult base (exp base p)
   end.
+
+Example test_exp : (exp 2 3) = 8.
+Proof. simpl. reflexivity. Qed.
