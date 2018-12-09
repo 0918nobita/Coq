@@ -194,3 +194,9 @@ Proof. simpl. reflexivity. Qed.
 
 Example test_factorial2 : (factorial 5) = (mult 10 12).
 Proof. simpl. reflexivity. Qed.
+
+Notation "x + y" := (plus x y) (at level 50, left associativity) : nat_scope.
+Notation "x - y" := (minus x y) (at level 50, left associativity) : nat_scope.
+Notation "x * y" := (mult x y) (at level 40, left associativity) : nat_scope.
+
+Eval simpl in 2 + 3 * (8 - 4). (* 14 : nat *)
