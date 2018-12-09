@@ -121,3 +121,14 @@ Module Playground1.
   Check S. (* S : nat -> nat *)
   Check pred. (* pred : nat -> nat *)
 End Playground1.
+
+Definition minustwo (n : nat) : nat :=
+  match n with
+    | O => O
+    | S O => O
+    | S (S n') => n'
+  end.
+
+Check (S(S(S(S O)))). (* 4 : nat *)
+Eval simpl in (minustwo 4). (* 2 : nat *)
+Check minustwo. (* minustwo : nat -> nat *)
