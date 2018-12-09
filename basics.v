@@ -172,3 +172,10 @@ Module Playground2.
   Example test_mult1 : (mult 3 3) = 9.
   Proof. simpl. reflexivity. Qed.
 End Playground2.
+
+(* 指数関数 *)
+Fixpoint exp (base power : nat) : nat :=
+  match power with
+    | O => S O
+    | S p => mult base (exp base p)
+  end.
