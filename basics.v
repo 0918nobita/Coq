@@ -247,3 +247,14 @@ Proof. reflexivity. Qed.
 
 Eval simpl in (forall n : nat, n + 0 = n). (* forall n : nat, n + 0 = n : Prop (命題) *)
 Eval simpl in (forall n : nat, 0 + n = n). (* forall n : nat, n = n : Prop (簡約されている) *)
+
+(* intros タクティック : 量化子や仮定をゴールから前提条件に変える *)
+Theorem plus_0_n'' : forall n : nat, 0 + n = n.
+Proof. intros n. reflexivity. Qed.
+
+Theorem plus_1_l : forall n : nat, 1 + n = S n.
+Proof. intros n. reflexivity. Qed.
+
+Theorem mult_0_l : forall n : nat, 0 * n = 0.
+Proof. intros n. reflexivity. Qed.
+(* l := left *)
