@@ -258,3 +258,11 @@ Proof. intros n. reflexivity. Qed.
 Theorem mult_0_l : forall n : nat, 0 * n = 0.
 Proof. intros n. reflexivity. Qed.
 (* l := left *)
+
+Theorem plus_id_example : forall n m : nat,
+  n = m -> n + n = m + m.
+Proof.
+  intros n m H.
+  rewrite H.
+  reflexivity.
+Qed.
