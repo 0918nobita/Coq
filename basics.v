@@ -200,3 +200,11 @@ Notation "x - y" := (minus x y) (at level 50, left associativity) : nat_scope.
 Notation "x * y" := (mult x y) (at level 40, left associativity) : nat_scope.
 
 Eval simpl in 2 + 3 * (8 - 4). (* 14 : nat *)
+
+Fixpoint beq_nat (n m : nat) : bool :=
+  match n, m with
+    | O, O => true
+    | O, S _ => false
+    | S _, O => false
+    | S n', S m' => beq_nat n' m'
+  end.
