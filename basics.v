@@ -293,13 +293,13 @@ Proof.
   reflexivity.
 Qed.
 
-Theorem plus_1_neq_0_firsttry : forall n : nat,
+Theorem plus_1_neq_0 : forall n : nat,
   beq_nat (n + 1) 0 = false.
 Proof.
   intros n.
   destruct n as [|n']. (* [|n'] はイントロパターン サブゴールの変数名指定 *)
-    reflexivity.
-    reflexivity.
+  - reflexivity.
+  - reflexivity.
 Qed.
 
 Theorem negb_involutive : forall b : bool, negb (negb b) = b.
