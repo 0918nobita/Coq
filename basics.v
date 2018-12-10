@@ -208,3 +208,10 @@ Fixpoint beq_nat (n m : nat) : bool :=
     | S _, O => false
     | S n', S m' => beq_nat n' m'
   end.
+
+Fixpoint ble_nat (n m : nat) : bool :=
+  match n, m with
+    | O, _ => true
+    | S _, O => false
+    | S n', S m' => ble_nat n' m'
+  end.
