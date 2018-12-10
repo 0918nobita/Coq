@@ -266,3 +266,12 @@ Proof.
   rewrite H.
   reflexivity.
 Qed.
+
+Theorem plus_id_exercise : forall n m o : nat,
+  n = m -> m = o -> n + m = m + o.
+Proof.
+  intros n m o H H2.
+  rewrite H.
+  rewrite H2.
+  reflexivity.
+Qed.
