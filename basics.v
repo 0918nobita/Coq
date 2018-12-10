@@ -310,5 +310,14 @@ Proof.
   - reflexivity.
 Qed.
 
+Theorem andb_commutative : forall b c, andb b c = andb c b.
 Proof.
+  intros b c.
+  destruct b.
+  - destruct c.
+    + reflexivity.
+    + reflexivity.
+  - destruct c.
+    + reflexivity.
+    + reflexivity.
 Qed.
