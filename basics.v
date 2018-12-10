@@ -297,6 +297,15 @@ Theorem plus_1_neq_0_firsttry : forall n : nat,
   beq_nat (n + 1) 0 = false.
 Proof.
   intros n.
+  destruct n as [|n']. (* [|n'] はイントロパターン サブゴールの変数名指定 *)
+    reflexivity.
+    reflexivity.
+Qed.
+
+Theorem zero_nbeq_plus_1 : forall n : nat,
+  beq_nat 0 (n + 1) = false.
+Proof.
+  intros n.
   destruct n as [|n'].
     reflexivity.
     reflexivity.
