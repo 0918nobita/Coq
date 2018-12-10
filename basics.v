@@ -215,3 +215,12 @@ Fixpoint ble_nat (n m : nat) : bool :=
     | S _, O => false
     | S n', S m' => ble_nat n' m'
   end.
+
+Example test_ble_nat1 : (ble_nat 2 2) = true.
+Proof. simpl. reflexivity. Qed.
+
+Example test_ble_nat2 : (ble_nat 2 4) = true.
+Proof. simpl. reflexivity. Qed.
+
+Example test_ble_nat3 : (ble_nat 4 2) = false.
+Proof. simpl. reflexivity. Qed.
