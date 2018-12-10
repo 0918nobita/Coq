@@ -240,6 +240,9 @@ Proof. simpl. reflexivity. Qed.
 Theorem plus_0_n : forall n : nat, 0 + n = n.
 Proof. simpl. reflexivity. Qed.
 
+Theorem plus_0_n' : forall n : nat, 0 + n = n.
+Proof. reflexivity. Qed.
+
 (* Example, Theorem, Lemma, Fact, Remark コマンドの挙動は同じ *)
 
 Eval simpl in (forall n : nat, n + 0 = n). (* forall n : nat, n + 0 = n : Prop (命題) *)
