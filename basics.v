@@ -226,3 +226,12 @@ Example test_ble_nat3 : (ble_nat 4 2) = false.
 Proof. simpl. reflexivity. Qed.
 
 Definition blt_nat (n m : nat) : bool := andb (negb (beq_nat n m)) (ble_nat n m).
+
+Example test_blt_nat1: (blt_nat 2 2) = false.
+Proof. simpl. reflexivity. Qed.
+
+Example test_blt_nat2: (blt_nat 2 4) = true.
+Proof. simpl. reflexivity. Qed.
+
+Example test_blt_nat3: (blt_nat 4 2) = false.
+Proof. simpl. reflexivity. Qed.
