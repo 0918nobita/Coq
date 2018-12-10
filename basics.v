@@ -235,3 +235,9 @@ Proof. simpl. reflexivity. Qed.
 
 Example test_blt_nat3: (blt_nat 4 2) = false.
 Proof. simpl. reflexivity. Qed.
+
+(* 簡約による証明 *)
+Theorem plus_0_n : forall n : nat, 0 + n = n.
+Proof. simpl. reflexivity. Qed.
+
+(* Example, Theorem, Lemma, Fact, Remark コマンドの挙動は同じ *)
